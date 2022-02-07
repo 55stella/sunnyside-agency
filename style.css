@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&family=Inter:wght@400;700&family=Lexend+Deca&family=Outfit:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border box would prevent elemrnts from increasing the box when padding is increased. */
+    font-family: 'Barlow', sans-serif;
+}
+
+header{
+    background-image: url('./images/mobile/image-header.jpg');
+    background-size: cover;
+    /* contain means we are not going to be streatching the image */
+    background-repeat: no-repeat;
+    background-color: blue;
+    height:100vh;
+    background-position: center;
+    
+}
+nav{
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+nav ul{
+    display: none;
+}
+nav li{
+    display:inline-block;
+    padding: 10px;
+}
+nav li a{
+    text-decoration: none;
+    color:white;
+
+}
+nav button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
