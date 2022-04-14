@@ -13,32 +13,478 @@ header{
     /* contain means we are not going to be streatching the image */
     background-repeat: no-repeat;
     background-color: blue;
-    height:100vh;
+    height:80vh;
     background-position: center;
+    text-align: center;
+    color: white;
     
 }
 nav{
     padding: 20px 5%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 
 }
 nav ul{
     display: none;
 }
+
+
+
+nav.open ul{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    top: 80px;
+    width: 90%;
+    padding: 15px;
+    color: black;
+
+
+
+}
+
+nav.open  ul::after{
+    content: '';
+    border: 20px solid #fff;
+    position: absolute;
+    top: -25px;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+
+}
+
+
+
+
+
+
 nav li{
     display:inline-block;
     padding: 10px;
+
 }
 nav li a{
     text-decoration: none;
-    color:white;
+    color:black
 
+}
+nav ul  #Contact{
+    text-transform: uppercase;
+    background: white;
+    color: black;
+    padding: 8px;
+    border-radius: 20px;
 }
 nav button{
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+header h1{
+    font-family: 'Fraunces';
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 12vh 0;
+}
+
+#feautures > div{
+display: flex;
+height:100vh;
+flex-direction: column-reverse;
+
+
+
+}
+
+#feautures > div > *{
+    flex: 1;
+    /* this would select all the div and give a flex of 1.  */
+    /* flex of 1 would enable all contents to occupy equal space. */
+}
+
+#feautures > div figure img{
+    width:100%;
+    min-height:100%;
+}
+
+.desktop{
+    display:none;
+}
+#feautures > div .content{
+    padding: 15%;
+    text-align: center;
+    /* background-color: blue; */
+    
+
+}
+#feautures > div .content h1{
+    font-family: 'Fraunces';
+    margin-bottom: 15px;
+    
+
+}
+#feautures > div .content p{
+    margin-bottom: 15px;
+    
+}
+#feautures > div .content a{
+    color:black;
+    text-decoration: none;
+
+}
+#feautures #stand-out{
+    flex-direction: column;
+}
+
+#feautures #services > div{
+    
+    height: 500px;
+    background-size:cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 0px 6% 50px;
+
+}
+#feautures #services h1{
+    font-family: 'Fraunces';
+    margin-bottom: 15px;
+    text-align: center
+
+    
+
+}
+#feautures #services > p{
+    line-height: 1.6;
+    
+    text-align: center;
+    
+}
+
+.graphics{
+    background-image: url('./images/mobile/image-graphic-design.jpg');
+    
+
+
+}
+.photography{
+    background-image: url('./images/mobile/image-photography.jpg');
+}
+#feautures #services .details{
+    
+    position: relative;
+    top: 50px;
+    
+    margin-bottom: 10px;
+    
+
+}
+.testimonials{
+    height: 100vh;
+}
+.test{
+    display: flex;
+    align-items: center;
+     justify-content: space-around;
+    padding:0px 7%  30px; 
+    /* background-color:pink;  */
+    gap: 20px;
+    
+    
+    
+
+    
+}
+
+    
+ .testimonials h1{
+    padding: 150px 10% 10%;
+    text-align: center;
+    font-family: 'Barlow';
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #a7abae; 
+    /* background-color: yellow; */
+    margin-right: 10%;
+    
+
+     /* background: #000;  */
+     
+
+
+ }
+.test .put figure{
+    width: 60px;
+    border-radius: 50%;
+    height:40px;
+    overflow: hidden;
+    margin-left: 20%;
+    align-self: flex-start;
+    
+}
+.test .put figure img{
+    width: 100%;
+    height: 100%; 
+    
+    
+    
+ }
+.testimonials .test div >p{
+    
+    text-align: center;
+    margin-right: 30%;
+    margin-top: 20px;
+    padding:  5px 5% 20px; 
+    line-height: 1.3;
+    font-size: 13px; 
+    color: hsl(213, 9%, 39%)
+    
+ 
+
+     
+    
+}
+
+ .put .name{
+    padding: 25px 10%;
+    position: relative;
+    left: 20px;
+    
+}
+.put .name h2{
+    font-family: 'Fraunces';
+    font-size: 14px;
+}
+.put .name span{
+    font-size: 12px;
+    color: hsl(213, 9%, 39%);
+    position: relative;
+    right: 15px;
+    
+
+}
+.test{
+    flex-direction: column; 
+
+    
+
+}
+#section1{
+    height: 100vh;
+    
+
+}
+
+ .pictures{
+    display: flex;
+    /* background-color: #000; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    position: relative;
+    bottom: 200px;
+    
+    
+    
+    
+}
+.pictures figure{
+    overflow:hidden;
+    height: 100%;
+    width:100%;
+    
+}
+
+.pictures{
+    flex-direction: column;
+} 
+.mobile{
+    width: 100%;
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(168, 34%, 41%);
+    align-items: center;
+    position: relative;
+    top: 500px;
+    height: 50vh;
+    gap: 40px;
+}
+#footer .logo a {
+    color: black;
+    padding: 10%;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 40px;
+    font-family: 'Barlow';
+
+    
+}
+#footer .nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    bottom: 30px;
+    /* background-color: white; */
+    
+
+    
+    
+
+
+}
+#footer .nav ul li a{
+    text-decoration: none;
+    color: black;
+    /* font-size: 16px; */
+
+}
+#footer .nav ul li{
+    list-style: none;
+    font-size: 20px;
+    
+    
+}
+#footer .images{
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+
+}
+#footer{
+    flex-direction: 'column';
+}
+
+
+
+@media screen and (min-width: 768px){
+    /* here from 768 , it will go to destop view */
+    header{
+        background-image: url('./images/desktop/image-header.jpg');
+        height:100vh;
+    }
+    #feautures #stand-out{
+        flex-direction: row;
+    }
+
+
+header h1{
+    font-size: 50px;
+
+}
+
+#feautures > div{
+    flex-direction: row;
+    height:auto;
+
+}
+.mobile{
+    display: none;
+}
+.desktop{
+    display:inline-block;
+    height: 100%;
+    width: 100%;
+    /* dont understand */
+
+}
+/* because images 1nline elements.so we need to make them inline block */
+#feautures > div .content{
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* here the display flex is applied to the contents inorder to eneable
+    ie h1 and p in order to rearange them. */
+}
+#feautures > div > *{
+    flex: 1 1 50%
+    /* flex of one would make content fit into the container */
+}
+#feautures #stand-out{
+    flex-direction: row;
+}
+.graphics{
+    background-image: url('./images/desktop/image-graphic-design.jpg');
+}
+.photography{
+    background-image: url('./images/desktop/image-photography.jpg');
+}
+#feautures #services .details{
+    /* background-color: #fff; */
+    position:relative;
+    top: 0px;
+    
+    
+    
+
+}
+nav ul{
+    display: inline;
+    
+
+}
+
+nav li a{
+    text-decoration: none;
+    color: white
+
+}
+
+
+
+
+
+
+.test{
+    flex-direction: row;
+}
+
+
+
+.pictures{
+    flex-direction: row;
+}
+#section1{
+    height:100%;
+    display: flex;
+    justify-content: flex-start;
+    bottom: 200px;
+    align-content: flex-start;
+    
+    
+}
+nav button{
+    display: none;
+}
+#footer{
+    flex-direction: 'row';
+}
+
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(168, 34%, 41%);
+    align-items: center;
+    position: relative;
+    top: -200px;
+    height: 50vh;
+    gap: 40px;
+}
+
 }
 
